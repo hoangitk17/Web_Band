@@ -14,11 +14,17 @@ html {
 #header {
     height: 46px;
     background-color: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
-#nav {}
+#nav {
+    display: inline-block;
+}
 
-#nav > li {
+#nav>li {
     display: inline-block;
     position: relative;
 }
@@ -26,6 +32,10 @@ html {
 #nav>li>a {
     color: #fff;
     text-transform: uppercase;
+}
+
+.nav-arrow-down {
+    font-size: 14px;
 }
 
 #nav li a {
@@ -42,16 +52,18 @@ html {
 #nav .subnav li {
     display: block;
 }
+
 #nav .subnav li:hover a,
 #nav>li:hover>a {
     color: #000;
     background-color: #ccc;
 }
 
-#nav,.subnav {
+#nav,
+.subnav {
     list-style: none;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
 }
 
 #nav .subnav {
@@ -69,11 +81,81 @@ html {
     line-height: 38px;
 }
 
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .search-btn:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+    font-weight: bold;
+}
+
+/*  */
 
 #slider {
     min-height: 500px;
+    margin-top: 46px;
+    padding-top: 58.3%; 
+    /* % là kích thước tỉ lệ chiều ngang của chính nó */
+    background: url('/assets/image/slider1.jpg') top center / cover no-repeat;
+    position: relative;
 }
 
+#slider .text-content {
+    color: white;
+    position: absolute;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+#slider .text-heading {
+    color: white;
+}
+#slider .text-description {
+    color: white;
+}
+
+/*  */
+#content {
+
+}
+
+.content-section {
+    width: 800px;
+    margin: 0 auto;
+    padding: 64px 0px;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.section-sub-heading {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.about-text {
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+/*  */
 #footer {}
 
-#content {}
